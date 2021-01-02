@@ -1,0 +1,59 @@
+.pieBox{
+    // width: 20pc;
+    height: 16.7pc;
+    border:0.8px solid grey;
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.box{
+    // width: 20pc;
+    border:0.8px solid grey;
+    height: 8pc;
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.box1{
+  // width: 20pc;
+  border:0.8px solid grey;
+  height: 6pc;
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.Aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}

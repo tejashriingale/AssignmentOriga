@@ -1,0 +1,117 @@
+
+
+  
+<!--ion Header-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title >
+      <div style="text-align: center;
+      font-size:30px;color: darkslategray;
+      background-color: antiquewhite;">
+        User Information
+      </div>
+      </ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+  <!--ion-content-->
+  <ion-content [fullscreen]="true" ion-padding>
+    <div class="container"> 
+      <!--pie hart-->
+      <ion-grid>
+        <ion-row>
+          <ion-col size-lg="6" size-md="6" size-sm="12" size-xs="12">
+            <!-- <div class="col pieBox" > -->
+              <div  class="col pieBox" id="chart_div"></div>
+                <!-- <google-chart [data]="pieChart"></google-chart> -->
+              <!-- </div> -->
+       </ion-col>
+<!--percentage and name,email,username-->
+          <ion-col size-lg="6" size-md="6" size-sm="12" size-xs="12">
+           <ion-grid class="ion-no-padding">
+             <ion-row>
+              <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
+              <div class="col box" >
+                <span  style="font-size: 40px;">
+               {{percentage}}% <ion-icon name="arrow-up" style="font-size: 40px;color: rgb(178, 34, 65);"></ion-icon>
+                </span>
+              </div>
+            </ion-col>
+             </ion-row>
+             <ion-row style="margin-top: 10px;">
+              <ion-col size-lg="4" size-md="4" size-sm="4" size="4">
+               
+                <img src="../../assets/img/pImage.png" class="col box" style="object-fit: cover"
+                  alt="profile Img">
+             
+            </ion-col>
+            <ion-col size-lg="8" size-md="8" size-sm="8" size="8">
+              <div class="col box">
+<ion-row>
+  <ion-col size-lg="4" size-md="4" size-sm="4" size="4">
+ <span style="float: left;font-size: 13px;">Name :</span></ion-col>
+  <ion-col size-lg="8" size-md="8" size-sm="8" size="8" *ngIf="btn==true">
+    <span style="float: left;font-size: 13px;">{{dispName.name}}</span>
+  </ion-col>
+</ion-row>
+  
+<ion-row>
+  <ion-col size-lg="4" size-md="4" size-sm="4" size="4">
+    <span style="float: left;font-size: 13px;">User Name:</span></ion-col>
+     <ion-col size-lg="8" size-md="8" size-sm="8" size="8" *ngIf="btn==true">
+       <span style="float: left;font-size: 13px;">{{dispName.username}}</span>
+     </ion-col>
+</ion-row>
+
+  
+<ion-row>
+  <ion-col size-lg="4" size-md="4" size-sm="4" size="4">
+    <span style="float: left;font-size: 13px;">Email Id:</span></ion-col>
+     <ion-col size-lg="8" size-md="8" size-sm="8" size="8" *ngIf="btn==true">
+       <span style="float: left;font-size: 13px;">{{dispName.email}}</span>
+     </ion-col>
+</ion-row>
+</div>
+          </ion-col>
+          </ion-row>
+          </ion-grid>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+<!--tabel-->
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Sl.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">UserName</th>
+        <th scope="col">City</th>
+        <th scope="col">PinCode</th>
+        <th scope="col">Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of dataArray">           
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.id}}</td>
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.name}}</td>
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.username}}</td>
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.address.city}}</td>
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.address.zipcode}}</td>
+       <td (click)="showValues(item.id)" style="cursor: pointer;">{{item.company.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      
+    </div>
+    
+  </ion-content> 
+
+
+
+
+
+
+
+
